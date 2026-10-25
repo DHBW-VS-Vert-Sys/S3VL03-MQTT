@@ -1,5 +1,11 @@
 {
   "name": "S3VL03-MQTT",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:4": {
+      "iptablesSwitchAtRuntime": false
+    },
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
   "postStartCommand": "bash .devcontainer/fix-docker-forward.sh"
 }
