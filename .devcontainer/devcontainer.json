@@ -1,0 +1,5 @@
+{
+  "name": "S3VL03-MQTT",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postStartCommand": "bash .devcontainer/fix-docker-forward.sh"
+}
