@@ -1,1 +1,0 @@
-# MQTT Subscriber und optional Publisher mit paho-mqtt

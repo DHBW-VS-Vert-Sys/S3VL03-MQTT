@@ -5,10 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run main.py",
+            "name": "Run subscriber.py",
             "type": "debugpy",
             "request": "launch",
-            "program": "main.py",
+            "program": "subscriber.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run publisher.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "publisher.py",
             "console": "integratedTerminal"
         }
     ]
