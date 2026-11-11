@@ -15,6 +15,22 @@ services:
     entrypoint: >
       sh -c "sleep 2 &&
              mosquitto_sub -h mosquitto -t test/topic"
+  subscriber-neu:
+    image: eclipse-mosquitto:2.0
+    container_name: mqtt-subscriber2
+    depends_on:
+      - mosquitto
+    entrypoint: >
+      sh -c "sleep 2 &&
+             mosquitto_sub -h mosquitto -t test/+/under_topic"
+  subscriber-neu2:
+    image: eclipse-mosquitto:2.0
+    container_name: mqtt-subscriber3
+    depends_on:
+      - mosquitto
+    entrypoint: >
+      sh -c "sleep 2 &&
+              mosquitto_sub -h mosquitto -t test/topic/#"
 
   publisher:
     image: eclipse-mosquitto:2.0
